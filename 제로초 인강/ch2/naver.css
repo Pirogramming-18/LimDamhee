@@ -9,6 +9,10 @@ html, body {
     padding: 0;
 }
 
+.center-align {
+    margin: 0 auto;
+    width: 1080px;
+}
 #fixed {
     position: fixed;
     top: 50px;
@@ -104,4 +108,31 @@ html, body {
     height: 21px;
     display: inline-block;
     margin: 14px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li:first-child span:first-child{
+    width: 25px;
+    height: 16px;
+    background-position: 0 -285px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+nav li:nth-child(2) span:first-child{
+    width: 27px;
+    height: 16px;
+    background-position: -279px -52px;
+    display: inline-block;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
 }
