@@ -1,0 +1,132 @@
+body {
+    background: #2a2a2a;
+}
+ul, li{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 14px;
+}
+
+navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    margin-left: 110px;
+    border: 1px solid transparent;
+}
+
+#box {
+    margin-left: 110px;
+}
+#my_navbar{
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+a {
+    color: white;
+}
+
+#icon{
+    float: right;
+    position: absolute;
+}
+
+#mess{
+    position: relative;
+    margin:215px;
+}
+#mess h1{
+    color:white;
+    font-size: 50px;
+}
+
+#mess p{
+    color: #aaaaaa;
+}
+
+.in{
+    color:white;
+}
+#bg{
+    float: bottom;
+    width:1920px;
+    height: 230px;
+    background: white;
+}
+#btimg{
+    vertical-align: top;
+    float:right;
+    margin-right: 600px;
+    height: 200px;
+    z-index: 1;
+}
+
+#con {
+    position: relative;
+    background: white;
+    width: 500px;
+    height: 600px;
+    padding-left: 53px;
+    padding-top: 20px;
+    padding-right: 20px;
+    float: right;
+    margin-right: 167px;
+    border-radius: 5px;
+}
+
+#con p{
+    color:black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#con input{
+    border-radius: 5px;
+    width: 400px;
+    height: 50px;
+}
+.center-align {
+    margin: 0 auto;
+    width: 1080px;
+}
+
+#sign{
+    background: #00b336;
+    color:white;
+    padding:20px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 400px;
+    height: 80px;
+}
+
+#con span{
+    color:cornflowerblue;
+}
+
+#search {
+    margin-left: 300px;
+    background: #aaaaaa;
+    color: #dfe3ea;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#up{
+    background: #2a2a2a;
+    color: white;
+    border-radius: 5px;
+    border-color: white;
+    box-shadow: none;
+}
+
+#a{
+    background: #2a2a2a;
+}
