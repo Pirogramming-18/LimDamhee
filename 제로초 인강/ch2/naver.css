@@ -13,6 +13,18 @@ html, body {
     margin: 0 auto;
     width: 1080px;
 }
+
+#header-top {
+    float: right;
+}
+
+#header-top span:first-child{
+    color:#888;
+    letter-spacing: -1px; /*자간 (글자간격)*/
+    font-size: 11px;
+    line-height: 22px;
+}
+
 #fixed {
     position: fixed;
     top: 50px;
@@ -36,6 +48,10 @@ html, body {
 #header-center{
     margin: 0 auto; 
     width: 1080px;
+}
+
+#header-search {
+    clear: both;
 }
 
 #header-search a {
