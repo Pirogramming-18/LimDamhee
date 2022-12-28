@@ -8,6 +8,14 @@ html, body {
     font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
 }
 
+h1, h2, h3,h4,h5,h6{
+    margin: 0;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
 .center-align {
     margin: 0 auto;
     width: 1080px;
@@ -70,7 +78,7 @@ header {
 
 #header-search {
     clear: both;
-    padding-top: 12px;
+    padding-top: 45px;
 }
 
 #header-search {
@@ -318,6 +326,11 @@ main {
     width: 1100px;
 }
 
+#main-first-block{
+    display: inline-block;
+    width: 100%;
+}
+
 #main-ad {
     float: left;
     width: 740px;
@@ -337,6 +350,15 @@ main {
     margin-bottom: 8px;
 }
 
+#main-second-block .inline-block:first-child{
+    width: 740px;
+}
+
+#main-second-block .inline-block:last-child{
+    width: 332px;
+    vertical-align: top;
+}
+
 #main-ytn {
     display: inline-block;
     width: 740px;
@@ -346,13 +368,44 @@ main {
     margin-bottom: 8px;
 }
 
-#main-newsstand {
+#main-ytn h3, 
+#main-ytn ol {
+    display: inline-block;
+}
+
+#main-newstand {
     display: inline-block;
     width: 740px;
     height: 246px;
     background-color: white;
     margin-right: 8px;
     margin-bottom: 8px;
+}
+
+#main-newstand h3{
+    height: 45px;
+    border-bottom: 1px solid #ebeef3;
+}
+
+#main-newstand ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#main-newstand li{
+    float: left;
+    width: 123px;
+    height: 67px;
+    border-right: 1px solid #f1f3f6;
+    border-bottom: 1px solid #f1f3f6;
+    text-align: center;
+}
+
+#main-newstand li img{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 #main-weather {
     display: inline-block;
@@ -385,6 +438,12 @@ main {
     height: 837px;
     background: white;
     margin-bottom: 8px;
+}
+
+#main-third-block,
+#main-fourth-block{
+    display: inline-block;
+    width: 100%;
 }
 
 #main-event {
