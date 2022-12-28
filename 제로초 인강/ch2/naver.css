@@ -1,5 +1,10 @@
 /* 선택자 (selector) */
 /* Cascading Style Sheet : 조상의 스타일시트 덮어씌움*/
+* {
+    box-sizing: border-box;
+}
+
+
 #header-center{
     margin: 0 auto; 
     width: 1080px;
@@ -8,6 +13,7 @@
 #header-search a {
     text-decoration: none;
 }
+
 #header-search h1{
     width: 198px;
     height: 48px;
@@ -16,6 +22,7 @@
     background-position: -4px -10px;
     background-repeat: no-repeat;*/
     background: url(./sp_search.png) -4px -4px no-repeat;
+    vertical-align: middle;
 }
 
 #header-search h1 span {
@@ -29,10 +36,18 @@
 #header-search fieldset {
     margin-left: 20px;
     padding: 12px 0px 12px 10px;
-    border: 2px solid #03cf5d;
-    width: 520px;
+    width: 521px;
     height: 49px;
     display: inline-block;
+    border: 2px solid #03cf5d; /* hex */
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
 }
 /*
 #header-search h1 {
