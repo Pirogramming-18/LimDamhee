@@ -8,15 +8,9 @@ html, body {
     font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
 }
 
-<<<<<<< HEAD
-=======
 .center-align {
     margin: 0 auto;
     width: 1080px;
-}
-
-#header-top {
-    float: right;
 }
 
 #header-top span:first-child{
@@ -26,7 +20,7 @@ html, body {
     line-height: 22px;
 }
 
->>>>>>> b6bd1a2391eb95599466da740e5bd48b07831064
+
 #fixed {
     position: fixed;
     bottom: 50px;
@@ -58,7 +52,6 @@ html, body {
     width: 1080px;
 }
 
-<<<<<<< HEAD
 header {
     height: 170px;
 }
@@ -78,10 +71,10 @@ header {
 #header-search {
     clear: both;
     padding-top: 12px;
-=======
+}
+
 #header-search {
     clear: both;
->>>>>>> b6bd1a2391eb95599466da740e5bd48b07831064
 }
 
 #header-search a {
@@ -132,6 +125,7 @@ header {
     vertical-align: top;
     width: 395px;
     height: 23px;
+    margin-right: 10px;
 }
 
 #header-search fieldset button {
