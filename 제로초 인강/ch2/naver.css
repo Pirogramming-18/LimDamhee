@@ -120,19 +120,40 @@ nav li {
     display: inline-block;
 }
 
-nav li:first-child span:first-child{
-    width: 25px;
+nav li span:first-child{
     height: 16px;
-    background-position: 0 -285px;
     background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
     background-repeat: no-repeat;
     display: inline-block;
+    margin-left: 14px;
+}
+nav li:first-child span:first-child{
+    width: 25px;
+    background-position: 0 -285px;
+    margin-left: 0;
 }
 
 nav li:nth-child(2) span:first-child{
     width: 27px;
-    height: 16px;
     background-position: -279px -52px;
-    display: inline-block;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png);
+}
+
+nav li:nth-child(3) span:first-child{
+    width: 40px;
+    background-position: -100px -182px;
+}
+
+nav li:nth-child(4) span:first-child{
+    width: 40px;
+    background-position: -101px -156px;
+}
+
+nav li:nth-child(5) span:first-child{
+    width: 26px;
+    background-position: -279px -156px;
+}
+
+nav li:nth-child(6) span:first-child{
+    width: 25px;
+    background-position: -70px -285px;
 }
