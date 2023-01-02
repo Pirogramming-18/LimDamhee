@@ -1,0 +1,92 @@
+@font-face{
+    font-family:'bitbit';
+    src:url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff'),url('//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2') ;
+}
+
+ol, ul {
+    list-style: none;
+    padding:0;
+}
+
+body {
+    margin:0;
+}
+
+h1 {
+    font-weight: normal;
+    margin : 0;
+}
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+
+    background-image: url("https://static.vecteezy.com/system/resources/previews/008/043/923/non_2x/fireworks-on-blue-night-background-free-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: darkgray;
+    font-family:'bitbit';
+}
+
+#overlay {
+    background-color: black;
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+main h1{
+    color:white;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+#countdown{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.box{
+    margin: 0 10px;
+    font-size: 24px;
+    background-color: white;
+    padding: 36px;
+    border-radius: 40px;
+}
+
+.box span{
+    display: block;
+    font-size: 72px;
+}
+
+#goals{
+    background-color: white;
+    padding: 50px 60px;
+    border-radius: 40px;
+}
+
+#goals li{
+    font-size: 24px;
+    margin: 20px 0;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 10px;
+    text-decoration-color: darkred;
+}
+
+#goals i{
+    margin-right: 10px;
+    color:darkred;
+}
+
+#goals li{
+    margin-bottom: 10px;
+}

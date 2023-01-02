@@ -1,0 +1,261 @@
+@import "reset.css";
+
+li a{
+    text-decoration: none;
+    color: #7A7F81;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+}
+
+hr{
+    width: 80%;
+}
+
+#menu{
+    position: fixed;
+    top: 0;
+    width: 100%;    
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar-nav {
+    font-size: 19px;
+    align-items: center;
+    margin-left: 7px;
+}
+
+.ho:hover{
+    color: #B7B6BD;
+}
+
+/* Pirogramming Part */
+#Pirogramming, #Intro, #Hightlights{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+}
+
+#Pirogramming h2{
+    font-weight: 700;
+}
+
+#Pirogramming h6{
+    font-weight: 550;
+}
+
+#Pirogramming a{
+    text-decoration-line: none;
+    color: white;
+}
+
+#Pirogramming button:hover{
+    background-color: #005FE1;
+}
+
+/* Intro Part */
+
+
+#Intro, #Hightlights, #Gallary, #Contact {
+    background-color: #6A747E; 
+}
+
+#Intro h2{
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #F71140;
+}
+
+#Intro p{
+    font-size: 1.1rem;
+    color: white;
+    width: 37rem;
+    text-align: center;
+}
+
+/* Highlights Part */
+#Hightlights{
+    justify-content: flex-start;
+    height: 25rem;
+}
+
+#Hightlights h1, #Contact h1{
+    color: #0075FF;
+    font-weight: 700;
+}
+
+#Hightlights div{
+    text-align: center;
+}
+
+#Hightlights .col{
+    margin : 4rem 4rem 0 4rem;
+}
+
+#Hightlights h5{
+    font-weight: 500;
+    color: white;
+}
+
+#Hightlights p{
+    color: white;
+    width: 20rem;;
+}
+
+#Hightlights i{
+    color: white;
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+/* Gallary Part */
+#Gallary{
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#Gallary .row{
+    justify-content: center;
+    margin-left: 11rem;
+}
+
+#Gallary img{
+    width: 20rem;
+    height: 12rem;
+}
+
+#gt{
+    margin-bottom: 2rem;
+}
+
+/* Contact Part */
+#Contact{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#Contact h1{
+    padding-top: 7rem;
+}
+
+#Contact .row{
+    margin-top: 3rem;
+}
+
+#Contact input{
+    border: white;
+    border-radius: 5px;
+    width: 28rem;
+    height: 2.5rem;
+    padding: 0.8rem;
+}
+
+#Contact input:focus, #Contact textarea:focus{
+    outline: none;
+    border-color: #0075FF; 
+    box-shadow: 0 0 10px #0075FF;
+}
+
+#Contact textarea{
+    margin: 1rem 4rem 2rem 4rem;
+    border: white;
+    border-radius: 5px;
+    padding: 0.8rem;
+}
+
+#Contact button{
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 20rem;
+    margin-bottom: 3rem;
+}
+
+/* footer Part */
+
+footer{
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #16191D;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .col{
+    margin-left: 7rem;
+    margin-right: 10rem;
+}
+
+footer .col div{
+    width: 9rem;
+    margin-bottom: 0.5rem;
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+}
+
+footer input{
+    border-radius: 5px;
+    width: 28rem;
+    height: 2.5rem;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+footer button{
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 11.5rem;
+    height: 2rem;
+}
+
+/* modal Part */
+
+#modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+
+#modal h5{
+    text-align: center;
+}
+
+#modal button{
+    background-color: #0075FF;
+    color: white;
+}
+
+#modal .modal_content{
+    width: 40rem;
+    margin:100px auto;
+    padding:20px 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#modal .modal_layer {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.5);
+    z-index:-1;
+} 
