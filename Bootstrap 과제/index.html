@@ -10,6 +10,10 @@
 <body>
     <div id="menu">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-between">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my_navbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div id="my_navbar" class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="my-1 mx-2 nav-item text-light" style="font-size: 20px;">
                 <a href="#Pirogramming" class="text-light">Pirogramming</a></li>
@@ -23,9 +27,10 @@
             <li class="my-1 mx-2 nav-item text-secondary">
                 <a href="#Contact" class="ho">Contact</a></li>
         </ul>
-        <ul class="navbar-nav">
-            <li class="my-1 mx-2 border border-success bg-dark text-success" style="border-radius: 5px; padding: 8px">About</li>
+        <ul id="nb" class="navbar-nav">
+            <li id="modal_open_btn3" class="my-1 mx-2 border border-success bg-dark text-success" style="border-radius: 5px; padding: 8px">About</li>
         </ul>
+        </div>
     </nav>
     </div>
 
@@ -86,7 +91,7 @@
             <div class="col"><input type="email" placeholder="email"></div>
             <div class="col"><input type="tel" placeholder="phone"></div>
         </div>
-        <textarea rows="15" cols="181" placeholder="Your messages here"></textarea>
+        <textarea rows="15" cols="50" placeholder="Your messages here"></textarea>
         <button id="modal_open_btn" class="bg-primary border border-primary text-light">Send</button>
     </div>
 
@@ -109,7 +114,7 @@
             <div class="col foot">
                 <h6 class="text-info">Stay Posted</h6>
                 <input type="email" placeholder="Tell me your email">
-                <button class="bg-primary border border-primary text-light">Subscribe for updates</button>
+                <button id="modal_open_btn2" class="bg-primary border border-primary text-light">Subscribe for updates</button>
             </div>
         </div>
     </footer>
@@ -118,9 +123,23 @@
         <div class="modal_content">
             <h5>Nice-Job!</h5>
             <hr>
-            <p>You clicked the button but it doesen't</p>
+            <p id="lg">You clicked the button but it doesen't actually go anywhere</p>
+            <p id="sh">Learn more at Bootstrap</p>
             <hr>
             <button id="modal_close_btn">OK</button>
+            <div class="modal_layer"></div>
+        </div>
+    </div>
+
+    <div id="modal2">
+        <div class="modal_content2">
+            <h4>피로그래밍 18기</h4>
+            <hr>
+            <p id="ft">파이팅!</p>
+            <p id="tg">모두들 아르샤 하느라 수고많으셨습니다! 힘들더라도 계속해서 달려봐요!</p>
+            <hr>
+            <button id="dw">Download</button>
+            <button id = "modal_close_btn2" class="bg-info border border-info text-dark">OK</button>
             <div class="modal_layer"></div>
         </div>
     </div>
@@ -129,10 +148,22 @@
         document.getElementById("modal_open_btn").onclick = function() {
             document.getElementById("modal").style.display="block";
         }
+        
+        document.getElementById("modal_open_btn2").onclick = function() {
+            document.getElementById("modal").style.display="block";
+        }
 
         document.getElementById("modal_close_btn").onclick = function() {
             document.getElementById("modal").style.display="none";
-        }   
+        }
+
+        document.getElementById("modal_open_btn3").onclick = function() {
+            document.getElementById("modal2").style.display="block";
+        }
+
+        document.getElementById("modal_close_btn2").onclick = function() {
+            document.getElementById("modal2").style.display="none";
+        } 
     </script>
     <script src="https://kit.fontawesome.com/6fbcf91afd.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

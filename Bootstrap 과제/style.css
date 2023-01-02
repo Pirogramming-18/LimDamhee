@@ -26,12 +26,19 @@ hr{
 
 .navbar-nav {
     font-size: 19px;
-    align-items: center;
     margin-left: 7px;
+}
+
+#nb {
+    margin-left: 60rem;
 }
 
 .ho:hover{
     color: #B7B6BD;
+}
+
+#wh:hover{
+    color: white;
 }
 
 /* Pirogramming Part */
@@ -79,6 +86,12 @@ hr{
     width: 37rem;
     text-align: center;
 }
+
+#Intro a {
+    color: black;
+    text-decoration: none;
+}
+
 
 /* Highlights Part */
 #Hightlights{
@@ -170,6 +183,7 @@ hr{
     border: white;
     border-radius: 5px;
     padding: 0.8rem;
+    width: 87rem;
 }
 
 #Contact button{
@@ -226,7 +240,7 @@ footer button{
 #modal {
     display: none;
     position: absolute;
-    top: 0;
+    top: 2400px;
     left: 0;
     width:100%;
     height:100%;
@@ -243,14 +257,47 @@ footer button{
 }
 
 #modal .modal_content{
-    width: 40rem;
+    text-align: center;
+    width: 37rem;
     margin:100px auto;
     padding:20px 10px;
     background-color: white;
     border-radius: 5px;
 }
 
-#modal .modal_layer {
+.modal_content hr, .modal_content2 hr {
+    width: 100%;
+}
+
+.modal_content p{
+    padding-left: 10rem;
+    padding-right: 10rem;
+    line-height: 2;
+}
+
+.modal_content button{
+    background-color: #006EFF;
+    color: white;
+    width: 35rem;
+    border-radius: 5px;
+    border-color: #006EFF;
+    padding: 6px;
+    box-shadow: none;
+}
+
+#lg{
+    font-weight: 550;
+}
+
+#sh{
+    margin-bottom: 3rem;
+}
+
+.modal_content h5{
+    font-weight: 600;
+}
+
+#modal .modal_layer, #modal2 .modal_layer {
     position:fixed;
     top:0;
     left:0;
@@ -259,3 +306,126 @@ footer button{
     background:rgba(0, 0, 0, 0.5);
     z-index:-1;
 } 
+
+/*modal2*/
+#modal2 {
+    display: none;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+
+#modal2 .modal_content{
+    text-align: center;
+    width: 37rem;
+    margin:100px auto;
+    padding:20px 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.modal_content2 p{
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
+    line-height: 1.6;
+}
+
+.modal_content2{
+    text-align: center;
+    width: 37rem;
+    margin:100px auto;
+    padding:20px 10px;
+    background-color: #6A747E;
+}
+
+.modal_content2 h4{
+    font-weight: 700;
+    color: white;
+}
+
+#ft{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+#tg{
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+#dw{
+    background-color: #6A747E;
+    border: none;
+    color:blue;
+    margin-left: 25rem;
+}
+
+#modal_close_btn2{
+    padding: 11px;
+    border-radius: 5px;
+}
+
+@media ( max-width: 575px ) {
+    .navbar-toggler-icon{
+        float: right;
+    }
+
+    .navbar-nav {
+        font-size: 19px;
+        align-items: flex-start;
+    }
+
+    .navbar-nav li{
+        padding-bottom: 1rem;
+    }
+
+    #Contact .col {
+        margin-bottom: 2rem;
+    }
+
+    #Contact textarea{
+        border: white;
+        border-radius: 5px;
+        width: 28rem;
+    }
+
+
+    #Hightlights p {
+        margin-left: 4rem;
+    }
+
+    #Gallary .row {
+        margin-left: 7rem;
+    }
+
+    #Gallary img{
+        margin-bottom: 2rem;
+    }
+
+    #gt{
+        padding-top: 30rem;
+        margin-bottom: 0;
+    }
+
+    #Intro h2 {
+        font-size: 2rem;
+    }
+
+    #Intro p {
+        font-size: 1rem;
+        color: white;
+        width: 35rem;
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #nb{
+        margin-left: 0;
+    }
+}
