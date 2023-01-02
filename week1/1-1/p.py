@@ -1,2 +1,4 @@
-step = int(input())
-print(tuple(range(-10,10,step)))
+s = list(range(1,11))
+print(s)
+del s[-5:]
+print(s)
