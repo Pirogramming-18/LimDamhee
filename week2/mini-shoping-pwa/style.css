@@ -9,11 +9,11 @@
 
   /* size */
   --base-space: 8px;
-  --size-button: 40px;
+  --size-button: 60px;
   --size-border: 4px;
-  --size-thumbnail: 50px;
+  --size-thumbnail: 40px;
   --font-size: 16px;
-
+  
   /* annimation */
   --animation-duration: 300ms;
 }
@@ -75,7 +75,7 @@ body {
   background-color: var(--color-pink);
 }
 
-.items {
+.ite {
   width: 80%;
   height: 90%;
   list-style: none;
