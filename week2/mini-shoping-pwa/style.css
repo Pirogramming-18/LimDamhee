@@ -84,7 +84,7 @@ body {
 }
 
 .item {
-  background-color: var(--color-white);
+  background-color: transparent;
   display: flex;
   align-items: center;
   padding: var(--base-space);
