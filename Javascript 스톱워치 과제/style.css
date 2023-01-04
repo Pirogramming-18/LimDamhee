@@ -44,6 +44,11 @@
     border-radius: 15px;
 }
 
+.record button{
+    border: none;
+    background: transparent;
+}
+
 .record div{
     display: flex;
     justify-content: space-between;
@@ -58,3 +63,27 @@
     margin-bottom: -10px;
     background-color: white;
 }
+
+/*check*/
+
+.checkbox-wrap { cursor: pointer; }
+.checkbox-wrap .check-icon  { display: inline-block; width: 18px; height: 18px; background: url(circle-check-regular.svg) left center no-repeat; vertical-align: middle; transition-duration: .3s; }
+.checkbox-wrap input[type=checkbox] { display: none; }
+.checkbox-wrap input[type=checkbox]:checked + .check-icon { background-image: url(circle-regular.svg); }
+
+label.bb::before, label.xx::before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+}
+
+input#aa {
+    display: none;
+}
+
+input#aa:checked + label.bb::before, input#zz:checked + label.xx::before{
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+}
+
+
+

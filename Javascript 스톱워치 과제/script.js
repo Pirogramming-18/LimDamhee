@@ -1,3 +1,4 @@
+const recordItem = document.getElementById("recordItem");
 // start
 let on = 0;
 
@@ -48,39 +49,40 @@ document.getElementById("reset").addEventListener("click", function(){
 
 // record
 
-/*
-function recordTime(){
-    const list = document.querySelector('.recordItem');
-    list.innerText = createHTMLString();
-    var newli = document.createElement("li");
-    var newContent = document.createTextNode(list.innerText);
-    document.body.insertBefore(newli, list);
-}
-
-function createHTMLString() {
-    
-    console.log(recordT);
-    return `
-        ${recordT}
-    `;
-}
-
-function setEventListeners() {
-    const stime = document.querySelector('.stop');
-    stime.addEventListener('click', () => recordTime());
-}
-
-document.getElementById("stop").addEventListener("click", function(){
-    recordTime();
-})
-*/
-
 document.getElementById("stop").addEventListener('click', function(){
-    let recordItem = document.getElementById("recordItem");
     let li = document.createElement('li');
     let recordT = document.querySelector(".watch h1").innerText;
     li.innerText = recordT;
 
-    recordItem.append(li);
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <input type="checkbox" class="ch" />
+    `;
+
+    div.innerHTML += li.innerHTML;
+    recordItem.append(div);
 })
 
+
+document.getElementById("aa").addEventListener("click", function(){
+    checkAll();
+})
+
+function checkAll(){
+    let checks = document.getElementsByClassName("ch");
+    console.log(checks);
+    let aa = document.getElementById("aa");
+    let ischecked = aa.checked;
+    console.log(ischecked);
+
+    if(ischecked == true){
+        for ( let i = 0; i < recordItem.childElementCount; i++){
+            checks[i].checked = true;
+        }
+    }
+    else {
+        for ( let i = 0; i < recordItem.childElementCount; i++){
+            checks[i].checked = false;
+        }
+    }
+}
