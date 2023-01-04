@@ -50,16 +50,20 @@ document.getElementById("reset").addEventListener("click", function(){
 // record
 
 document.getElementById("stop").addEventListener('click', function(){
-    let li = document.createElement('li');
+    let li = document.createElement('span');
     let recordT = document.querySelector(".watch h1").innerText;
     li.innerText = recordT;
 
     const div = document.createElement("div");
     div.innerHTML = `
+        <label class="labels">
         <input type="checkbox" class="ch" />
+        <div id="showCheckbox"></div>
+        <span>${recordT}</span>
+        </label>
     `;
 
-    div.innerHTML += li.innerHTML;
+    div.classList.add("list");
     recordItem.append(div);
 })
 
@@ -70,12 +74,11 @@ document.getElementById("aa").addEventListener("click", function(){
 
 function checkAll(){
     let checks = document.getElementsByClassName("ch");
-    console.log(checks);
     let aa = document.getElementById("aa");
     let ischecked = aa.checked;
-    console.log(ischecked);
 
-    if(ischecked == true){
+    console.log(ischecked);
+    if(ischecked){
         for ( let i = 0; i < recordItem.childElementCount; i++){
             checks[i].checked = true;
         }
@@ -86,3 +89,23 @@ function checkAll(){
         }
     }
 }
+
+/* remove part */
+
+document.getElementById("trash").addEventListener("click", function(){
+    let aa = document.getElementById("aa");
+    aa.checked = false;     /*전체 선택 아이콘 해제*/ 
+
+    let checks = document.getElementsByClassName("ch");
+    let num = recordItem.childElementCount;
+    console.log(num);
+
+    for (let i = 0; i < recordItem.childElementCount; i++){
+        let ischecked = checks[i].checked;
+        if (ischecked){
+            checks[i].parentNode.remove();
+            console.log(checks);
+            i--;
+        }
+    };
+})

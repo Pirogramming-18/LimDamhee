@@ -1,8 +1,9 @@
-
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 50vh;
 }
 
 .title h3{
@@ -49,20 +50,25 @@
     background: transparent;
 }
 
-.record div{
+#tx{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
-    margin-bottom: -10px;
 }
 
 #recordItem{
     margin-bottom: -10px;
     background-color: white;
 }
+
+#recover{
+    background-color: white;
+    padding-left: 10px;
+}
+
 
 /*check*/
 
@@ -86,4 +92,31 @@ input#aa:checked + label.bb::before, input#zz:checked + label.xx::before{
 }
 
 
+.labels {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
+    cursor: pointer;
+}
+
+.ch {
+    display: none;
+}
+
+.ch:checked + #showCheckbox {
+    background: url("circle-check-regular.svg") no-repeat;
+    background-size: contain;
+}
+
+#showCheckbox {
+    width: 20px;
+    height: 16px;
+    background: url("circle-regular.svg") no-repeat;
+    background-size: contain;
+}
+
+.list span {
+    margin-left: 85px;
+    font-size: 27px;
+}
