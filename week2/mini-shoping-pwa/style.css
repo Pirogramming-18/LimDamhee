@@ -75,7 +75,7 @@ body {
   background-color: var(--color-pink);
 }
 
-.ite {
+.items {
   width: 80%;
   height: 90%;
   list-style: none;
@@ -84,7 +84,7 @@ body {
 }
 
 .item {
-  background-color: transparent;
+  background-color: var(--color-white);
   display: flex;
   align-items: center;
   padding: var(--base-space);
