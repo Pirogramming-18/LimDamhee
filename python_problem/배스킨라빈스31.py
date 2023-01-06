@@ -18,6 +18,12 @@ while(True):
         break
 
 #4단계
+cnt = int(cnt)
+sum = 0
+
+player = 'A'
+for i in range(cnt):
+    print(f'player{player}: {i + 1}')
 
 #5단계
 #6단계
