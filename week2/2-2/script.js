@@ -51,7 +51,7 @@ const thisDates = [...Array(thisDate + 1).keys()].slice(1); // [1, 2, 3, ..., 31
 
 
 // 이전 달 날짜 배열 채우기
-// 저번 달이 목요일인 경우 => 목요일 =4 prev = 30
+// 저번 달이 목요일인 경우 => 목요일 = 4 prev = 30
 if(prevDay !== 6) { // 전 달 마지막 요일이 토요일이면 전 달 날짜 배열이 필요없음
     for (let i = 0; i < prevDay + 1; i++) {
         //for (let i=0; i<4+1; i++)
@@ -105,7 +105,7 @@ const makeCalendar = () => {
     const viewYear = date.getFullYear();
     const viewMonth = date.getMonth();
 
-    document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth}월`
+    document.querySelector('.year-month').textContent = `${viewYear}년 ${viewMonth + 1}월`
 
     // 지난 달 마지막 날짜와 요일
     const prevLast = new Date(viewYear, viewMonth, 0);
@@ -117,10 +117,11 @@ const makeCalendar = () => {
     const thisDate = thisLast.getDate();
     const thisDay = thisLast.getDay();
 
-    //전체 날짜에 필요한 날짜 만들기
+    //전체 날짜에 필요한 날짜 배열 만들기
     const prevDates = []; // [26, 27, 28, 29, 30, 31]
     const nextDates = []; // [1, ...]
     const thisDates = [...Array(thisDate + 1).keys()].slice(1); // [1, 2, 3, ..., 31]
+    //thisDate + 1 => 0~31까지 배열 생성. slice(1) => 0 자르고 1~31 배열 반환
 
     if(prevDay !== 6) { 
         for (let i = 0; i < prevDay + 1; i++) {
@@ -144,6 +145,10 @@ const makeCalendar = () => {
     //html dates 그리기
     document.querySelector('.dates').innerHTML = dates.join('');
 
+
+    // 여기부터 다시 합시다요
+
+
     // 오늘 날짜 표시
     const today = new Date();
     if (viewMonth === today.getMonth && viewYear === today.getFullYear()) {
@@ -157,7 +162,7 @@ const makeCalendar = () => {
 
     // 현재 달 첫번째 시작일의 인덱스, 마지막 일의 인덱스
     const firstDateIndex = dates.indexOf(1);
-    const lastDateIndex = dates.lastindexOf(thisDate);
+    const lastDateIndex = dates.lastIndexOf(thisDate);
 
     dates.forEach((date, i) => {
         // 삼항연산자 (조건문) ? [참일 떄 실행] : [거짓일 때 실행]
