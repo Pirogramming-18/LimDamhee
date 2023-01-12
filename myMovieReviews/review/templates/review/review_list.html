@@ -1,4 +1,11 @@
-<html>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</html>
+
+<a href="/review/create">Add a New Review ✏️</a>
+<hr />
+
+{% for review in reviews %}
+<p><a href="/review/{{ review.pk }}">{{review.title}}</a></p>
+<small>개봉년도: {{review.time}}</small>
+<small>장르: {{review.genre}}</small>
+<small>별점: {{review.star}}</small>
+<hr />
+{% endfor %}
