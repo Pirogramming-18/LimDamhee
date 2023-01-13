@@ -11,15 +11,16 @@ def reviews_retrieve(request, pk, *args, **kwargs):
     return render(request, "review/review_retrieve.html", {"review": review})
 
 def reviews_create(request:HttpRequest, *args, **kwargs):
-    if request.method == "REVIEW":
+    if request.method == "POST":
         Review.objects.create(
-            title=request.REVIEW["title"],
-            director=request.REVIEW["director"],
-            character=request.REVIEW["character"],
-            genre=request.REVIEW["genre"],
-            star=request.REVIEW["star"],
-            time=request.REVIEW["time"],
-            content=request.REVIEW["content"],
+            title=request.POST["title"],
+            year=request.POST["year"],
+            director=request.POST["director"],
+            character=request.POST["character"],
+            genre=request.POST["genre"],
+            star=request.POST["star"],
+            time=request.POST["time"],
+            content=request.POST["content"],
         )
         return redirect("/")
     return render(request, "review/review_create.html")

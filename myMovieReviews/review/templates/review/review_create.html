@@ -1,6 +1,6 @@
 <h1>새 리뷰 작성하기</h1>
 
-<form action="/review/create" method="review">
+<form action="/review/create" method="POST">
     {% csrf_token %}
     <div>제목 : <input name="title" /></div>
     <div>개봉년도 : <input name="year" /></div>
@@ -12,4 +12,5 @@
     
     <div>리뷰: <textarea name="content"></textarea></div>
     <div><input type="submit" value="save"/></div>
+
 </form>
