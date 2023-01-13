@@ -3,8 +3,9 @@
 <form action="/review/create" method="review">
     {% csrf_token %}
     <div>제목 : <input name="title" /></div>
+    <div>개봉년도 : <input name="year" /></div>
     <div>감독 : <input name="director" /></div>
-    <div>배우 : <input name="character" /></div>
+    <div>주연 : <input name="character" /></div>
     <div>장르 : <input name="genre" /></div>
     <div>별점 : <input name="star" /></div>
     <div>러닝타임 : <input name="time" /></div>

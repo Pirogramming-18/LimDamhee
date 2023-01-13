@@ -4,7 +4,7 @@
 
 {% for review in reviews %}
 <p><a href="/review/{{ review.pk }}">{{review.title}}</a></p>
-<small>개봉년도: {{review.time}}</small>
+<small>개봉년도: {{review.year}}</small>
 <small>장르: {{review.genre}}</small>
 <small>별점: {{review.star}}</small>
 <hr />
