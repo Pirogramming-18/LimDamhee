@@ -16,3 +16,9 @@
 <br />
 <br />
 <p>{{ review.content }}</p>
+
+<a href="/review/{{ review.id }}/update"><input type="button" value="수정하기"></a>
+<form action="/review/{{ review.id }}/delete" method="post">
+    {% csrf_token %}
+    <input type="submit" value="삭제하기">
+</form>

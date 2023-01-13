@@ -24,3 +24,27 @@ def reviews_create(request:HttpRequest, *args, **kwargs):
         )
         return redirect("/")
     return render(request, "review/review_create.html")
+
+
+def rewviews_delete(request, pk, *args, **kwargs):
+    if request.method == "POST":
+        review = Review.objects.get(id=pk)
+        review.delete()
+    return redirect("/")
+
+def reviews_update(request, pk, *args, **kwargs):
+    review = Review.objects.get(id=pk)
+
+    if request.method == "POST":
+        review.title = request.POST["title"]
+        review.year=request.POST["year"]
+        review.director=request.POST["director"]
+        review.character=request.POST["character"]
+        review.genre=request.POST["genre"]
+        review.star=request.POST["star"]
+        review.time=request.POST["time"]
+        review.content=request.POST["content"]      
+        review.save()
+        return redirect(f"/review/{review.id}")
+
+    return render(request, "review/review_update.html", {"review": review})
