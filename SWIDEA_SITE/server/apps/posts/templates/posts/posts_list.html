@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시물 목록</title>
+    <link rel="stylesheet" href="{% static 'css/list2.css' %}"/>
+</head>
+<body>
+    <button><a href="{% url 'posts:create' %}">아이디어 등록 🐾</a></button>
+    <button><a href="{% url 'posts:list' %}">아이디어 관리 🐾</a></button>
+    <button><a href="{% url 'posts:dev_create' %}">개발툴 등록 🐾</a></button>
+    <button><a href="{% url 'posts:dev_list' %}">개발툴 관리 🐾</a></button>
+    {% for post in posts %}
+    <article>
+    {% if post.photo %}
+    <p>
+        <img src="{{ post.photo.url }}" />
+    </p>
+    {% endif %}
+    <div>
+    <p><a href="{% url 'posts:retrieve' post.pk %}">{{post.title}}</a></p>
+    <small>예상 개발 툴 : {{post.devtool}}</small>
+    <p>아이디어 관심도: {{ post.interest }}</p>
+    </div>
+    </article>
+    <hr />
+    {% endfor %}
+    
+
+    <a href="{% url 'posts:create' %}">
+        <img src="{% static 'image/plus.png' %}">
+    </a>
+</body>
+</html>

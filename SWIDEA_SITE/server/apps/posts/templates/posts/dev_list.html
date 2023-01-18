@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발툴 리스트</title>
+    <link rel="stylesheet" href="{% static 'css/list2.css' %}"/>
+</head>
+<body>
+    <button><a href="{% url 'posts:create' %}">아이디어 등록 🐾</a></button>
+    <button><a href="{% url 'posts:list' %}">아이디어 관리 🐾</a></button>
+    <button><a href="{% url 'posts:dev_create' %}">개발툴 등록 🐾</a></button>
+    <button><a href="{% url 'posts:dev_list' %}">개발툴 관리 🐾</a></button>
+    {% for dev in devs %}
+    <article>
+    <div>
+    <p><a href="{% url 'posts:dev_retrieve' dev.pk %}">{{dev.name}}</a></p>
+    <div>개발툴 종류: {{ dev.kind }}</div>
+    <div>개발툴 설명: {{ dev.content }}</div>
+    </div>
+    </article>
+    <hr />
+    {% endfor %}
+    
+
+
+</body>
+</html>

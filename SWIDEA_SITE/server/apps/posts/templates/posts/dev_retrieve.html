@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% load static %}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>개발툴 상세</title>
+    <link rel="stylesheet" href="{% static 'css/retrieve2.css' %}"/>
+</head>
+<body>
+    <button><a href="{% url 'posts:create' %}">아이디어 등록 🐾</a></button>
+    <button><a href="{% url 'posts:list' %}">아이디어 관리 🐾</a></button>
+    <button><a href="{% url 'posts:dev_create' %}">개발툴 등록 🐾</a></button>
+    <button><a href="{% url 'posts:dev_list' %}">개발툴 관리 🐾</a></button>
+
+
+    <h1>{{dev.name}}</h1>
+    <small>{{dev.kind}}</small>
+    <p>{{dev.content}}</p>
+
+    <div>
+        <a href="/devs">목록</a>
+    </div>
+    <div>
+        <a href="{% url 'posts:dev_update' dev.pk %}">수정하기</a>
+    </div>
+    <form action="{% url 'posts:dev_delete' dev.pk %}" method="post">
+        {% csrf_token %}
+        <input type="submit" , value="삭제하기" />
+    </form>
+</body>
+</html>

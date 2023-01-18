@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 상세</title>
+    <link rel="stylesheet" href="{% static 'css/retrieve2.css' %}"/>
+  </head>
+  <body>
+    <button><a href="{% url 'posts:create' %}">아이디어 등록 🐾</a></button>
+    <button><a href="{% url 'posts:list' %}">아이디어 관리 🐾</a></button>
+    <button><a href="{% url 'posts:dev_create' %}">개발툴 등록 🐾</a></button>
+    <button><a href="{% url 'posts:dev_list' %}">개발툴 관리 🐾</a></button>
+
+    <h1>{{post.title}}</h1>
+    {% if post.photo %}
+    <p>
+        <img src="{{ post.photo.url }}" />
+    </p>
+    {% endif %}
+    <small>아이디어 관심도: {{post.interest}}</small><br />
+    <small>예상 개발툴 :{{post.devtool}}</small><br />
+    <br />
+    <small>아이디어 설명: </small>
+    <p>{{post.content}}</p>
+
+    <hr />
+    <div>
+      <a href="/">목록</a>
+    </div>
+    <div>
+      <a href="{% url 'posts:update' post.pk %}">수정하기</a>
+    </div>
+    <form action="{% url 'posts:delete' post.pk %}" method="post">
+      {% csrf_token %}
+      <input type="submit" , value="삭제하기" />
+    </form>
+  </body>
+</html>

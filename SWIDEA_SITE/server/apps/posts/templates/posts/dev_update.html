@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% load static %}
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>개발툴 수정</title>
+    <link rel="stylesheet" href="{% static 'css/update2.css' %}"/>
+</head>
+<body>
+    <button><a href="{% url 'posts:create' %}">아이디어 등록 🐾</a></button>
+    <button><a href="{% url 'posts:list' %}">아이디어 관리 🐾</a></button>
+    <button><a href="{% url 'posts:dev_create' %}">개발툴 등록 🐾</a></button>
+    <button><a href="{% url 'posts:dev_list' %}">개발툴 관리 🐾</a></button>
+
+    <h1>개발툴 수정하기</h1>
+
+    <form action="{% url 'posts:dev_update' dev.pk %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>개발툴 명: </p>
+    <input name="name" value="{{dev.name}}" />
+    <br />
+    <p>개발툴 종류: </p>
+    <input name="kind" value="{{dev.kind}}" />
+    <br />
+    <p>개발툴 설명:</p>
+    <textarea name="content" > {{dev.content}}</textarea>
+    <br />
+
+    <div>
+        <input type="submit" , value="저장하기" />
+    </div>
+    </form>
+</body>
+</html>
