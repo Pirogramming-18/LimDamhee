@@ -32,10 +32,12 @@
       <br />
       <p>예상 개발툴: </p>
       <br />
-      <select name="">
-        
+      <select name="devtool" id="devtool">
+        <option selected>------</option>
+        {% for devtool in devtools %}
+        <option value="{{ devtool.id }}" name="devtool">{{ devtool.name }}</option>
+        {% endfor %}
       </select>
-      <dropdown name="devtool" />
 
       <div>
         <input type="submit" , value="저장하기" />

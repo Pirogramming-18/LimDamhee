@@ -5,7 +5,6 @@ from django.http.request import HttpRequest
 #게시글 파트
 def posts_list(request:HttpRequest, *args, **kwargs):
     posts = Post.objects.all()
-
     #text = request.GET.get("text")
     #if text:
     #    posts = posts.filter(content__contains=text)
@@ -19,19 +18,29 @@ def posts_list(request:HttpRequest, *args, **kwargs):
 def posts_retrieve(request:HttpRequest, pk, *args, **kwargs):
     post = Post.objects.get(id=pk)
 
-    return render(request, "posts/posts_retrieve.html", {"post": post})
+    context = {
+        'post':post,
+    }
+    return render(request, "posts/posts_retrieve.html", context=context)
 
 def posts_create(request:HttpRequest, *args, **kwargs):
     if request.method == "POST":
+        devtool_id=request.POST["devtool"]
         Post.objects.create(
             title=request.POST["title"],
             content=request.POST["content"],
             interest=request.POST["interest"],
             photo=request.FILES["photo"],
-            devtool=request.POST["devtool"]
+            devtool=Devtool.objects.get(id=devtool_id)
         )
         return redirect("/")
-    return render(request, "posts/posts_create.html")
+
+    devtools = Devtool.objects.all()
+
+    context = {
+        'devtools':devtools,
+    }
+    return render(request, "posts/posts_create.html", context=context)
 
 def posts_delete(request:HttpRequest, pk, *args, **kwargs):
     if request.method == "POST":
@@ -39,17 +48,26 @@ def posts_delete(request:HttpRequest, pk, *args, **kwargs):
         post.delete()
     return redirect("/")
 
-def posts_update(request:HttpRequest, pk, *args, **kwargs):
+def posts_update(request, pk, *args, **kwargs):
     post = Post.objects.get(id=pk)
+    devtools = Devtool.objects.all()
+
     if request.method == "POST":
+        devtool_id = request.POST["devtool"]
+
         post.title=request.POST["title"]
         post.content=request.POST["content"]
         post.interest=request.POST["interest"]
         post.photo=request.FILES.get("photo")
-        post.devtool=request.POST["devtool"]
+        post.devtool=Devtool.objects.get(id=devtool_id)
         post.save()
         return redirect(f"/posts/{post.id}")
-    return render(request, "posts/posts_update.html", {"post":post})
+
+    context = {
+        'post': post,
+        'devtools':devtools,
+    }
+    return render(request, "posts/posts_update.html", context=context)
 
 ##개발툴 파트
 

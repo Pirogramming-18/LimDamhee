@@ -12,6 +12,5 @@ class Post(models.Model):
     title = models.CharField(max_length=64)
     content = models.TextField()
     interest = models.IntegerField()
-    devtool_id = models.ForeignKey(Devtool, related_name="devtool", on_delete=models.CASCADE)
-    Devtool = models.CharField(max_length=64)
+    devtool = models.ForeignKey(Devtool, related_name="devtool", on_delete=models.CASCADE)
     photo = models.ImageField(blank=True, upload_to='posts/%Y%m%d')

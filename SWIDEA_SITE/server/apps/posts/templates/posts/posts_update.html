@@ -33,7 +33,12 @@
       <br />
       <p>예상 개발툴: </p>
       <br />
-      <input name="devtool" value="{{post.devtool}}" />
+      <select name="devtool" id="devtool">
+        <option value="" selected>현재 선택: {{ post.devtool.name }}</option>
+        {% for devtool in devtools %}
+        <option value="{{ devtool.id }}" name="devtool">{{ devtool.name }}</option>
+        {% endfor %}
+      </select>
 
       <div>
         <input type="submit" , value="저장하기" />

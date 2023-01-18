@@ -22,7 +22,7 @@
     {% endif %}
     <div>
     <p><a href="{% url 'posts:retrieve' post.pk %}">{{post.title}}</a></p>
-    <small>예상 개발 툴 : {{post.devtool}}</small>
+    <small>예상 개발 툴 : {{post.devtool.name}}</small>
     <p>아이디어 관심도: {{ post.interest }}</p>
     </div>
     </article>

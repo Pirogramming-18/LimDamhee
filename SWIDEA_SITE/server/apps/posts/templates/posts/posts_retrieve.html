@@ -21,7 +21,8 @@
     </p>
     {% endif %}
     <small>아이디어 관심도: {{post.interest}}</small><br />
-    <small>예상 개발툴 :{{post.devtool}}</small><br />
+    <small>예상 개발툴 : <a href="{% url 'posts:dev_retrieve' post.devtool.id %}">{{post.devtool.name}}</a></small>
+    <br />
     <br />
     <small>아이디어 설명: </small>
     <p>{{post.content}}</p>
