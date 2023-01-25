@@ -1,0 +1,8 @@
+{% block content %}
+
+<h1>글 제목: {{ post_detail.title }}</h1>
+<p> {{ post_detail.body }}</p>
+
+{% for comment in post_detail.comment_set.all %}
+    <p> {{ comment}} </p>
+{% endfor %}
